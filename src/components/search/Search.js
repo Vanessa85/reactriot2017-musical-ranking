@@ -40,7 +40,7 @@ class Search extends Component {
           title="Star Wars Medley (Violin Cover) - Taylor Davis"
           id="ytplayer"
           type="text/html" width="100%" height="400"
-          src="http://www.youtube.com/embed/qzQahpxucKk" />
+          src="http://www.youtube.com/embed/qzQahpxucKk?autoplay=1" />
       );
     }
     else {
