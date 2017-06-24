@@ -20,6 +20,7 @@ class Search extends Component {
             </div>
           </div>
         </form>
+        { this.renderVideo() }
         {
           isLoading?
             this.renderLoading()
@@ -30,6 +31,21 @@ class Search extends Component {
         }
       </div>
     );
+  }
+
+  renderVideo() {
+    if (this.props.results.length === 0) {
+      return (
+        <iframe
+          title="Star Wars Medley (Violin Cover) - Taylor Davis"
+          id="ytplayer"
+          type="text/html" width="100%" height="400"
+          src="http://www.youtube.com/embed/qzQahpxucKk" />
+      );
+    }
+    else {
+      return null;
+    }
   }
 
   renderLoading() {
