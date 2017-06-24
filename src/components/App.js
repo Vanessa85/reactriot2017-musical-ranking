@@ -4,6 +4,7 @@ import Topbar from './Topbar';
 import Home from './Home';
 import RankingContainer from './ranking/RankingContainer';
 import TrackDetailsContainer from './track-details/TrackDetailsContainer';
+import SearchContainer from './search/SearchContainer';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
             </div>
             <div className="medium-7 large-8 columns">
               <Switch>
-                <Route path="/" exact component={Home} />
+                <Route path="/" exact component={SearchContainer} />
                 <Route path="/track" component={TrackDetailsContainer} />
               </Switch>
             </div>
