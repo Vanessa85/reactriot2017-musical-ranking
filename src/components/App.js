@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Topbar from './Topbar';
 import Home from './Home';
 import RankingContainer from './ranking/RankingContainer';
-import TrackDetails from './track-details/TrackDetails';
+import TrackDetailsContainer from './track-details/TrackDetailsContainer';
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
             <div className="medium-7 large-7 columns">
               <Switch>
                 <Route path="/" exact component={Home} />
-                <Route path="/:id" component={TrackDetails} />
+                <Route path="/track" component={TrackDetailsContainer} />
               </Switch>
             </div>
           </div>

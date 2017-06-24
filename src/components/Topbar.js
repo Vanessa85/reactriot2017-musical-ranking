@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Topbar = () => (
   <div className="top-bar">
@@ -6,7 +7,7 @@ const Topbar = () => (
       <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
         <button className="menu-icon dark" type="button" data-toggle></button>
       </span>
-      {' '}<strong>Musical Ranking</strong>
+      {' '}<Link to="/"><strong>Musical Ranking</strong></Link>
     </div>
   </div>
 );
