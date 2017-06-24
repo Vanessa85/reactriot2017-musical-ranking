@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Topbar from './Topbar';
-import Home from './Home';
 import RankingContainer from './ranking/RankingContainer';
 import TrackDetailsContainer from './track-details/TrackDetailsContainer';
 import SearchContainer from './search/SearchContainer';

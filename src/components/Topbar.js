@@ -7,7 +7,7 @@ const Topbar = () => (
       <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
         <button className="menu-icon dark" type="button" data-toggle></button>
       </span>
-      {' '}<Link to="/"><strong>Musical Ranking</strong></Link>
+      {' '}<Link to="/" style={{ color: '#000' }}><strong>Musical Ranking</strong></Link>
     </div>
   </div>
 );

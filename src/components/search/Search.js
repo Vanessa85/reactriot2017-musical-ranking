@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import './search.css';
 
 class Search extends Component {
   render() {
@@ -7,15 +8,15 @@ class Search extends Component {
     let input;
 
     return (
-      <div>
+      <div className="search-component">
         <form onSubmit={ (e) => {
           e.preventDefault();
           getResults(input.value.trim());
         }}>
           <div className="input-group">
-            <input type="text" ref={ node => input = node } className="input-group-field" placeholder="Enter your query" required />
+            <input type="text" ref={ node => input = node } className="input-group-field" placeholder="Search..." required />
             <div className="input-group-button">
-              <button type="submit" className="button">Buscar</button>
+              <button type="submit" className="button">Search</button>
             </div>
           </div>
         </form>
