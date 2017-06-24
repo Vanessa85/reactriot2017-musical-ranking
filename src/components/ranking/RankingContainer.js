@@ -3,7 +3,8 @@ import { getTopTracks } from '../../actions/ranking';
 import Ranking from './Ranking';
 
 const mapStateToProps = (state) => ({
-  tracks: state.ranking.tracks
+  tracks: state.ranking.tracks,
+  isLoading: state.ranking.isLoading
 });
 
 export default connect(mapStateToProps, { getTopTracks })(Ranking);

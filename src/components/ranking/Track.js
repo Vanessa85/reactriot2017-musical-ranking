@@ -1,14 +1,15 @@
 import React from 'react';
+import './Track.css';
 
 const Track = ({ item }) => (
-  <div>
-    <div>
+  <div className="track">
+    <div className="track-image">
       <img src={item.art.pic_small} alt={item.name} />
     </div>
-    <div>
-      <h4>{ item.name }</h4>
-      { item.rank }
-      Artist: { item.art.name }
+    <div className="track-info">
+      <h6>{ item.name }</h6>
+      <span>{ item.art.name }</span>
+      <span><i className="zmdi zmdi-headset zmdi-hc-fw"></i> { item.rank }</span>
     </div>
   </div>
 );
