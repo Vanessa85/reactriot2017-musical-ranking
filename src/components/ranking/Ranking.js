@@ -6,21 +6,22 @@ import 'nanoscroller/bin/css/nanoscroller.css';
 import './Ranking.css';
 
 class Ranking extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   componentDidMount() {
     this.props.getTopTracks();
-    // $('.nano').nanoScroller({
-    //   preventPageScrolling: true
-    // });
-    // $('.nano').nanoScroller();
+  }
+
+  componentWillUpdate() {
+    $('.nano').nanoScroller({ destroy: true });
+    $('.nano').off('scrollend');
   }
 
   componentDidUpdate() {
     if (!this.props.isLoading) {
       $('.nano').nanoScroller();
+      $('.nano').on('scrollend', (e) => {
+        const { tracks, getTopTracks } = this.props;
+        getTopTracks(tracks.length*2);
+      });
     }
   }
 
@@ -30,8 +31,11 @@ class Ranking extends Component {
     return (
       <div className="nano">
         <div className="nano-content">
-          { tracks.map( (item, index) => <Track key={index} item={item} />) }
-          { isLoading? this.renderLoading() : null }
+          { isLoading?
+              this.renderLoading()
+            :
+              tracks.map( (item, index) => <Track key={index} item={item} />)
+          }
         </div>
       </div>
     );

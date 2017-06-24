@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Topbar from './Topbar';
 import Home from './Home';
@@ -12,10 +12,10 @@ const App = () => {
         <Topbar />
         <section role="main">
           <div className="row">
-            <div className="medium-5 large-5 columns">
+            <div className="medium-5 large-4 columns">
               <RankingContainer />
             </div>
-            <div className="medium-7 large-7 columns">
+            <div className="medium-7 large-8 columns">
               <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/track" component={TrackDetailsContainer} />
