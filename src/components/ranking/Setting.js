@@ -5,6 +5,14 @@ const YEAR = (new Date()).getFullYear();
 const MONTH = (new Date()).getMonth() + 1;
 
 class Setting extends Component {
+  constructor(props) {
+    super(props);
+    this.onChangeYear = this.onChangeYear.bind(this);
+    this.state = {
+      limitMonth: Number(props.year) === YEAR? MONTH : null
+    };
+  }
+
   componentWillMount() {
     this.months = [
       { value: 1, name: 'January' },
@@ -38,6 +46,9 @@ class Setting extends Component {
   }
 
   render() {
+    console.log('limitMonth', this.state.limitMonth)
+
+    var months = this.state.limitMonth? this.months.filter( item => item.value <= MONTH ) : this.months;
 
     return (
       <div className="setting-component">
@@ -54,20 +65,25 @@ class Setting extends Component {
           style={{display: 'none'}}>
           <label>
             Year
-            <select ref={ node => this.selectYear = node } >
+            <select ref={ node => this.selectYear = node } onChange={this.onChangeYear}>
               { this.years.map(item => <option key={item} value={item}>{item}</option>) }
             </select>
           </label>
           <label>
             Month
             <select ref={ node => this.selectMonth = node }>
-              { this.months.filter( item => item.value <= MONTH ).map(item => <option key={item.value} value={item.value}>{item.name}</option>) }
+              { months.map(item => <option key={item.value} value={item.value}>{item.name}</option>) }
             </select>
           </label>
           <button type="submit" className="button tiny expanded" style={{marginTop: 10}}>Show</button>
         </form>
       </div>
     );
+  }
+
+  onChangeYear() {
+    var year = this.selectYear.value;
+    this.setState({ limitMonth: Number(year) === YEAR? MONTH : null });
   }
 }
 
