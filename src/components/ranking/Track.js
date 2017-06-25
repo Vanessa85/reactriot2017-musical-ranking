@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Track.css';
 
 const Track = ({ item }) => (
-  <Link to={{pathname: '/reactriot2017-rankingmusic/track', search: `song=${item.name}` }}>
+  <Link to={{pathname: '/track', search: `song=${item.name}` }}>
     <div className="track">
       <div className="track-image">
         <img src={item.art.pic_small} alt={item.name} />
