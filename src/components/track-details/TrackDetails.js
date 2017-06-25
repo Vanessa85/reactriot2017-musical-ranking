@@ -27,7 +27,7 @@ class TrackDetails extends Component {
     } else if (!errorMessage && Object.keys(video).length) {
       return <Video data={video} />
     } else {
-      return <h1>Error</h1>
+      return <h1>Not found</h1>
     }
   }
 
