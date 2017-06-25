@@ -18,7 +18,7 @@ const App = () => {
             <div className="medium-7 large-8 columns">
               <Switch>
                 <Route path="/reactriot2017-rankingmusic/" exact component={SearchContainer} />
-                <Route path="track" component={TrackDetailsContainer} />
+                <Route path="/reactriot2017-rankingmusic/track" component={TrackDetailsContainer} />
               </Switch>
             </div>
           </div>
