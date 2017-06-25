@@ -4,7 +4,9 @@ import Ranking from './Ranking';
 
 const mapStateToProps = (state) => ({
   tracks: state.ranking.tracks,
-  isLoading: state.ranking.isLoading
+  isLoading: state.ranking.isLoading,
+  year: state.ranking.year,
+  month: state.ranking.month
 });
 
 export default connect(mapStateToProps, { getTopTracks })(Ranking);

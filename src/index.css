@@ -25,6 +25,13 @@ iframe {
   margin-bottom: 15px;
 }
 
+.setting-component {
+  margin-bottom: 10px;
+}
+.setting-component::after {
+  clear:both;
+}
+
 /*.nano > .nano-content { padding: 10px; }*/
 .nano > .nano-pane {
   background: #c0c0c0;
@@ -32,4 +39,7 @@ iframe {
 }
 .nano > .nano-pane > .nano-slider {
   background: #444;
+}
+.nano > .nano-content {
+  padding-right: 15px;
 }
