@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Topbar from './Topbar';
 import RankingContainer from './ranking/RankingContainer';
 import TrackDetailsContainer from './track-details/TrackDetailsContainer';
-import SearchContainer from './search/SearchContainer';
+// import SearchContainer from './search/SearchContainer';
+import Home from './Home';
 
 const App = () => {
   return (
@@ -11,13 +12,13 @@ const App = () => {
       <div>
         <Topbar />
         <section role="main">
-          <div className="row" style={{background: 'black'}}>
+          <div className="row">
             <div className="medium-5 large-4 columns">
               <RankingContainer />
             </div>
             <div className="medium-7 large-8 columns">
               <Switch>
-                <Route path="/reactriot2017-rankingmusic/" exact component={SearchContainer} />
+                <Route path="/reactriot2017-rankingmusic/" exact component={Home} />
                 <Route path="/reactriot2017-rankingmusic/track" component={TrackDetailsContainer} />
               </Switch>
             </div>

@@ -1,12 +1,35 @@
 body {
-  background-color: #312e2e;
-  color: white;
+  background-color: whitesmoke;
+}
+
+h1, h2, h3, h4, h5, h6, body {
+  font-family: 'Lato', Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+
+section[role=main] {
+  padding-top: 10px;
+}
+
+iframe {
+  border: 0;
 }
 
 .top-bar {
-  background-color: #983193;
+  background-color: #027373;
+}
+.top-bar-title, .top-bar-title a {
+  color: white;
 }
 
-a {
-  color: white;
+.video-component h3 {
+  margin-bottom: 15px;
+}
+
+/*.nano > .nano-content { padding: 10px; }*/
+.nano > .nano-pane {
+  background: #c0c0c0;
+  width: 8px;
+}
+.nano > .nano-pane > .nano-slider {
+  background: #444;
 }
