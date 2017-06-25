@@ -5,6 +5,7 @@ import RankingContainer from './ranking/RankingContainer';
 import TrackDetailsContainer from './track-details/TrackDetailsContainer';
 // import SearchContainer from './search/SearchContainer';
 import Home from './Home';
+import NotFound from './NotFound';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
               <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/track" component={TrackDetailsContainer} />
+                <Route path="*" component={NotFound} />
               </Switch>
             </div>
           </div>
