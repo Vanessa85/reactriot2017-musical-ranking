@@ -1,6 +1,7 @@
 .track {
   display: flex;
-  border-bottom: 1px solid #e4e4e1;
+  /*border-bottom: 1px solid #e4e4e1;  */
+  border-bottom: 1px dotted #983193;  
   padding: 6px 0;
 }
 

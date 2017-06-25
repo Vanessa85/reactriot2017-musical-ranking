@@ -11,7 +11,7 @@ const App = () => {
       <div>
         <Topbar />
         <section role="main">
-          <div className="row">
+          <div className="row" style={{background: 'black'}}>
             <div className="medium-5 large-4 columns">
               <RankingContainer />
             </div>

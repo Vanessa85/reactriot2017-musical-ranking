@@ -7,6 +7,7 @@ import logger from 'redux-logger';
 import registerServiceWorker from './registerServiceWorker';
 import reducers from './reducers';
 import App from './components/App';
+import './index.css';
 
 const store = createStore(reducers, applyMiddleware(thunk, logger));
 
